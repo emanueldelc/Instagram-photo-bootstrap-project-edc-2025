@@ -1,50 +1,180 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instagram Feed</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Create a post</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i>
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Feed</title>
+  <script src="https://kit.fontawesome.com/f1273a2201.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <style>
+    .col-3 mt-1 me-1 {
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-brands fa-instagram"></i>Instagram</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ms-auto d-flex justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Create Post
+            </button>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><i class="fa-solid fa-gear"></i>
+            </a>
+            <ul class="dropdown-menu-end dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Button trigger modal -->
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create a New Post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Add the caption of your post</p>
+          <textarea name="" cols=60 id=""></textarea>
+          <div class="d-flex gap-1">
+            <button class="btn btn-light border"><i class="fa-solid fa-camera"></i></button>
+            <button class="btn btn-light border"><i class="fa-solid fa-location-dot"></i></button>
           </div>
         </div>
-      </nav>
-
-      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</button>
-        </li>
-      </ul>
-      <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">Grid</div>
-        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">Single</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
       </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-  </body>
+    </div>
+  </div>
+  <ul class="nav nav-pills mb-3 d-flex justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+        type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+          class="fa-solid fa-table-cells"></i></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+          class="fa-solid fa-square"></i></button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+      tabindex="0">
+      <div class="row g-0 justify-content-center">
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+      </div>
+      <div class="row g-0 justify-content-center">
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+      </div>
+      <div class="row g-0 justify-content-center">
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+        <div class="col-3 mt-1 me-1">
+          <img class="w-100" src="https://picsum.photos/400">
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade align-items-center d-flex flex-column" id="pills-profile" role="tabpanel"
+      aria-labelledby="pills-profile-tab" tabindex="0">
+      <!-- card 1 -->
+      <div class="card mb-3" style="width: 35rem;">
+        <div class="card-header d-flex justify-content-between">
+          <span>My first post</span>
+          <span>04/25</span>
+        </div>
+        <img src="https://picsum.photos/200" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">500 likes</h6>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+      <div class="card mb-3" style="width: 35rem;">
+        <div class="card-header d-flex justify-content-between">
+          <span>My first post</span>
+          <span>04/25</span>
+        </div>
+        <img src="https://picsum.photos/200" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">500 likes</h6>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+      <div class="card mb-3" style="width: 35rem;">
+        <div class="card-header d-flex justify-content-between">
+          <span>My first post</span>
+          <span>04/25</span>
+        </div>
+        <img src="https://picsum.photos/200" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">500 likes</h6>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+      <div class="card mb-3" style="width: 35rem;">
+        <div class="card-header d-flex justify-content-between">
+          <span>My first post</span>
+          <span>04/25</span>
+        </div>
+        <img src="https://picsum.photos/200" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h6 class="card-title">500 likes</h6>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
